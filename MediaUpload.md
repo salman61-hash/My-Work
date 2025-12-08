@@ -1,15 +1,14 @@
-```bash
 Relation
+```bash
+
 
  public function thumbnail()
     {
         return $this->belongsTo(Media::class, 'thumbnail_id');
     }
 ```
-
-```bash
-
 Media Repository
+```bash
 
     public static function storeByRequest($fileInputName, $folderName = 'default')
     {
@@ -27,9 +26,9 @@ Media Repository
     }
 
 ```
-
-```bash
 Controller
+```bash
+
 
  public function store(BoostPlanRequest $request)
     {
@@ -49,10 +48,10 @@ Controller
     }
 
 ```
-
+Blade for create
 ```bash
 
-Blade for create
+
 
  <div class="mb-3">
                 <label class="form-label">{{ __('Thumbnail') }}</label>
@@ -61,9 +60,8 @@ Blade for create
 
 ```
 
-```bash
-
 Blade For Update with img preview
+```bash
 
  {{-- Thumbnail --}}
             <div class="mb-3">
