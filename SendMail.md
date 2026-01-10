@@ -317,5 +317,26 @@ Dispatch in SendMessage Controller
  SendCustomMailEvent::dispatch($client, $title, $message);
 ```
 
+.env set up
+
+```bash
+MAIL_MAILER="smtp"
+MAIL_HOST="smtp.gmail.com"
+MAIL_SCHEME=null
+MAIL_PORT="587"
+MAIL_ENCRYPTION="ssl"
+MAIL_USERNAME="lms.razinsoft@gmail.com"
+MAIL_PASSWORD="nhhyxoaowzyhxopv"
+MAIL_FROM_ADDRESS="lms.razinsoft@gmail.com"
+MAIL_FROM_NAME="Travel Promotion"
+```
+
+Run Command
+
+```bash
+php artisan queue:table
+php artisan migrate
+php artisan make:mail SendMail
+```
 
 
