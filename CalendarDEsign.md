@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lunch Tracker Calendar - Static Version</title>
+  <title>Lunch Tracker Calendar - January 2026</title>
 
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -139,10 +139,10 @@
     }
 
     /* Status colors */
-    .status-eaten    .status-icon { color: #28a745; } /* green tick */
-    .status-not      .status-icon { color: #dc3545; } /* red cross */
-    .status-cancel   .status-icon { color: #fd7e14; } /* orange cross */
-    .status-unknown  .status-icon { color: #adb5bd; } /* grey question */
+    .status-eaten    .status-icon { color: #28a745; } /* green ✓ */
+    .status-not      .status-icon { color: #dc3545; } /* red ✗ */
+    .status-cancel   .status-icon { color: #fd7e14; } /* orange ✗ */
+    .status-unknown  .status-icon { color: #adb5bd; } /* grey ? */
 
     .today {
       border: 3px solid #0d6efd !important;
@@ -154,31 +154,14 @@
       opacity: 0.88;
     }
 
-    @media (max-width: 992px) {
-      .calendar-table td { height: 120px; }
-      .status-icon { font-size: 5rem; }
-    }
-
-    @media (max-width: 768px) {
-      .month-year { font-size: 1.8rem; }
-      .nav-arrow { width: 44px; height: 44px; font-size: 1.3rem; }
-      .calendar-table td { height: 100px; }
-      .status-icon { font-size: 4.2rem; }
-      .date-number { font-size: 1.2rem; }
-      .edit-icon { width: 34px; height: 34px; font-size: 1rem; }
-    }
-
-    @media (max-width: 576px) {
-      .calendar-table th { font-size: 0.85rem; padding: 0.7rem; }
-      .calendar-table td { height: 80px; }
-      .status-icon { font-size: 3.4rem; }
-    }
+    @media (max-width: 992px)  { .calendar-table td { height: 120px; } .status-icon { font-size: 5rem; } }
+    @media (max-width: 768px)  { .month-year { font-size: 1.8rem; } .nav-arrow { width:44px; height:44px; font-size:1.3rem; } .calendar-table td { height: 100px; } .status-icon { font-size: 4.2rem; } }
+    @media (max-width: 576px)  { .calendar-table th { font-size: 0.85rem; padding: 0.7rem; } .calendar-table td { height: 80px; } .status-icon { font-size: 3.4rem; } }
   </style>
 </head>
 <body>
 
 <div class="calendar-wrapper">
-
   <div class="calendar">
 
     <!-- Header -->
@@ -270,84 +253,119 @@
           <!-- Week 3 -->
           <tr>
             <td class="status-not">
-              <div class="date-number">4</div>
+              <div class="date-number">11</div>
               <i class="bi bi-x-circle-fill status-icon"></i>
               <div class="edit-icon"><i class="bi bi-pencil"></i></div>
             </td>
             <td class="status-eaten">
-              <div class="date-number">5</div>
+              <div class="date-number">12</div>
               <i class="bi bi-check-circle-fill status-icon"></i>
               <div class="edit-icon"><i class="bi bi-pencil"></i></div>
             </td>
-            <td class="status-cancel">
-              <div class="date-number">6</div>
-              <i class="bi bi-x-circle-fill status-icon"></i>
-              <div class="edit-icon"><i class="bi bi-pencil"></i></div>
-            </td>
             <td class="status-eaten">
-              <div class="date-number">7</div>
+              <div class="date-number">13</div>
               <i class="bi bi-check-circle-fill status-icon"></i>
               <div class="edit-icon"><i class="bi bi-pencil"></i></div>
             </td>
             <td class="status-not">
-              <div class="date-number">8</div>
+              <div class="date-number">14</div>
               <i class="bi bi-x-circle-fill status-icon"></i>
               <div class="edit-icon"><i class="bi bi-pencil"></i></div>
             </td>
-            <td class="status-eaten">
-              <div class="date-number">9</div>
+            <td class="status-eaten today">
+              <div class="date-number">15</div>
               <i class="bi bi-check-circle-fill status-icon"></i>
               <div class="edit-icon"><i class="bi bi-pencil"></i></div>
             </td>
-            <td class="status-eaten">
-              <div class="date-number">10</div>
-              <i class="bi bi-check-circle-fill status-icon"></i>
+            <td class="status-unknown">
+              <div class="date-number">16</div>
+              <i class="bi bi-question-circle-fill status-icon"></i>
+              <div class="edit-icon"><i class="bi bi-pencil"></i></div>
+            </td>
+            <td class="status-unknown">
+              <div class="date-number">17</div>
+              <i class="bi bi-question-circle-fill status-icon"></i>
               <div class="edit-icon"><i class="bi bi-pencil"></i></div>
             </td>
           </tr>
 
           <!-- Week 4 -->
           <tr>
+            <td class="status-eaten">
+              <div class="date-number">18</div>
+              <i class="bi bi-check-circle-fill status-icon"></i>
+              <div class="edit-icon"><i class="bi bi-pencil"></i></div>
+            </td>
             <td class="status-not">
-              <div class="date-number">4</div>
+              <div class="date-number">19</div>
               <i class="bi bi-x-circle-fill status-icon"></i>
               <div class="edit-icon"><i class="bi bi-pencil"></i></div>
             </td>
             <td class="status-eaten">
-              <div class="date-number">5</div>
+              <div class="date-number">20</div>
               <i class="bi bi-check-circle-fill status-icon"></i>
               <div class="edit-icon"><i class="bi bi-pencil"></i></div>
             </td>
             <td class="status-cancel">
-              <div class="date-number">6</div>
+              <div class="date-number">21</div>
               <i class="bi bi-x-circle-fill status-icon"></i>
               <div class="edit-icon"><i class="bi bi-pencil"></i></div>
             </td>
             <td class="status-eaten">
-              <div class="date-number">7</div>
+              <div class="date-number">22</div>
               <i class="bi bi-check-circle-fill status-icon"></i>
               <div class="edit-icon"><i class="bi bi-pencil"></i></div>
             </td>
             <td class="status-not">
-              <div class="date-number">8</div>
+              <div class="date-number">23</div>
               <i class="bi bi-x-circle-fill status-icon"></i>
               <div class="edit-icon"><i class="bi bi-pencil"></i></div>
             </td>
             <td class="status-eaten">
-              <div class="date-number">9</div>
-              <i class="bi bi-check-circle-fill status-icon"></i>
-              <div class="edit-icon"><i class="bi bi-pencil"></i></div>
-            </td>
-            <td class="status-eaten">
-              <div class="date-number">10</div>
+              <div class="date-number">24</div>
               <i class="bi bi-check-circle-fill status-icon"></i>
               <div class="edit-icon"><i class="bi bi-pencil"></i></div>
             </td>
           </tr>
 
-          <!-- You can continue adding more weeks manually -->
-          <!-- For now leaving remaining weeks empty for you to fill -->
-          <tr><td colspan="7" class="text-center py-5 text-muted">More weeks...</td></tr>
+          <!-- Week 5 -->
+          <tr>
+            <td class="status-not">
+              <div class="date-number">25</div>
+              <i class="bi bi-x-circle-fill status-icon"></i>
+              <div class="edit-icon"><i class="bi bi-pencil"></i></div>
+            </td>
+            <td class="status-eaten">
+              <div class="date-number">26</div>
+              <i class="bi bi-check-circle-fill status-icon"></i>
+              <div class="edit-icon"><i class="bi bi-pencil"></i></div>
+            </td>
+            <td class="status-eaten">
+              <div class="date-number">27</div>
+              <i class="bi bi-check-circle-fill status-icon"></i>
+              <div class="edit-icon"><i class="bi bi-pencil"></i></div>
+            </td>
+            <td class="status-not">
+              <div class="date-number">28</div>
+              <i class="bi bi-x-circle-fill status-icon"></i>
+              <div class="edit-icon"><i class="bi bi-pencil"></i></div>
+            </td>
+            <td class="status-eaten">
+              <div class="date-number">29</div>
+              <i class="bi bi-check-circle-fill status-icon"></i>
+              <div class="edit-icon"><i class="bi bi-pencil"></i></div>
+            </td>
+            <td class="status-cancel">
+              <div class="date-number">30</div>
+              <i class="bi bi-x-circle-fill status-icon"></i>
+              <div class="edit-icon"><i class="bi bi-pencil"></i></div>
+            </td>
+            <td class="status-eaten">
+              <div class="date-number">31</div>
+              <i class="bi bi-check-circle-fill status-icon"></i>
+              <div class="edit-icon"><i class="bi bi-pencil"></i></div>
+            </td>
+          </tr>
         </tbody>
       </table>
     </div>
@@ -357,5 +375,4 @@
 
 </body>
 </html>
-
 ```
