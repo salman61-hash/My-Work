@@ -64,9 +64,12 @@ Step 1 : Controller
         return response()->stream($callback, 200, $headers);
     }
 
-    ```
-    step 2 : Route
-    ```bash
+```
+
+step 2 : Route
+
+```bash
+
 Route::get('customers/report', 'customersReport')
          ->name('customer.report');
          ```
@@ -78,10 +81,11 @@ Route::get('customers/report', 'customersReport')
                         <a href="{{ route('customer.report', ['format' => 'pdf']) }}" class="btn btn-danger">
                             <i class="fa fa-file-pdf"></i> PDF
                         </a>
-                        ```
-                        step 4 : LoadView
-                        ```bash
-                        <!DOCTYPE html>
+
+```
+step 4 : LoadView
+```bash
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
