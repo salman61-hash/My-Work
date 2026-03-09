@@ -72,9 +72,9 @@ step 2 : Route
 
 Route::get('customers/report', 'customersReport')
          ->name('customer.report');
-         ```
-         step 3 : blade
-         ```bash
+```
+step 3 : blade
+```bash
 <a href="{{ route('customer.report', ['format' => 'csv']) }}" class="btn btn-success">
                             <i class="fa fa-file-csv"></i> CSV
                         </a>
