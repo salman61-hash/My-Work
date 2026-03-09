@@ -113,6 +113,53 @@ step 3 : blade
                             </ul>
                         </div>
 
+Custom RAnge
+```bash
+<!-- Export Report Button -->
+                        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exportModal">
+                            <i class="fa fa-file-export"></i> Export Report
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exportModal" tabindex="-1" aria-labelledby="exportModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Export Customers</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"><i
+                                                class="fas fa-times"></i></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <!-- Format -->
+                                        <div class="mb-3">
+                                            <label class="form-label">Export Format</label>
+                                            <select id="exportFormat" class="form-select">
+                                                <option value="csv">CSV</option>
+                                                <option value="pdf">PDF</option>
+                                            </select>
+                                        </div>
+
+                                        <!-- All checkbox -->
+                                        <div class="form-check mb-2">
+                                            <input class="form-check-input" type="checkbox" id="exportAll">
+                                            <label class="form-check-label" for="exportAll">All Customers</label>
+                                        </div>
+
+                                        <!-- Number input -->
+                                        <input type="number" id="exportCount" class="form-control" min="1"
+                                            placeholder="Enter number of customers">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Cancel</button>
+                                        <button type="button" class="btn btn-success" id="exportSubmit">Export</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    ```
+
 ```
 step 4 : LoadView
 ```bash
