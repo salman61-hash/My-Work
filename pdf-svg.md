@@ -16,6 +16,31 @@ Step 1 : Controller
             return $this->downloadCustomersCSV($customers, $dateTitle, $stats);
         }
     }
+ Custom range
+```bash
+ public function customersReport(Request $request)
+    {
+
+        $format = $request->input('format', 'csv');
+        $all = $request->input('count') === 'all';      
+        $countNumber = $request->input('count_number');
+
+        $customers = (new CustomerRepository())->getAllOrFindBySearch();
+
+        if (!$all && is_numeric($countNumber)) {
+            $customers = $customers->take((int) $countNumber);
+        }
+
+        $dateTitle = now()->format('d M Y');
+        $stats = ['total' => $customers->count()];
+
+        if ($format === 'pdf') {
+            return $this->downloadCustomersPDF($customers, $dateTitle, $stats);
+        } else {
+            return $this->downloadCustomersCSV($customers, $dateTitle, $stats);
+        }
+    }
+    ```
 
     private function downloadCustomersPDF($customers, $dateTitle, $stats)
     {
