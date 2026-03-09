@@ -75,12 +75,18 @@ Route::get('customers/report', 'customersReport')
 ```
 step 3 : blade
 ```bash
-<a href="{{ route('customer.report', ['format' => 'csv']) }}" class="btn btn-success">
-                            <i class="fa fa-file-csv"></i> CSV
-                        </a>
-                        <a href="{{ route('customer.report', ['format' => 'pdf']) }}" class="btn btn-danger">
-                            <i class="fa fa-file-pdf"></i> PDF
-                        </a>
+                        <div class="dropdown">
+                            <button class="btn btn-warning dropdown-toggle" type="button" id="exportDropdown"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa fa-file-export"></i> {{ __('Export Report') }}
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="exportDropdown">
+                                <li><a class="dropdown-item" href="{{ route('customer.report', ['format' => 'csv']) }}">
+                                        <i class="fa fa-file-csv"></i> CSV</a></li>
+                                <li><a class="dropdown-item" href="{{ route('customer.report', ['format' => 'pdf']) }}">
+                                        <i class="fa fa-file-pdf"></i> PDF</a></li>
+                            </ul>
+                        </div>
 
 ```
 step 4 : LoadView
